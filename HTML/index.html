@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulario De Inscripción</title>
+	<link rel="shortcut icon" href="../Logo.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+	
+	<h1>Inscripciones Para El <br>Politécnico Sergio Augusto Beras</h1>
+	<h2>Datos Del Estudiante:</h2>
+
+	<form id="Formulario" action="http://localhost/Programas/Formulario_Inscripcion/PHP/Procesar_Formulario.php" method="POST">
+		<label for="nombre">Nombre Completo:</label>
+		<input type="text" id="nombre" name="nombre">
+		<br><br>
+
+		<label for="nacimiento">Fecha de Nacimiento:</label>
+		<input type="date" id="nacimiento" name="nacimiento">
+		<br><br>
+
+		<label for="telefono">Número de Teléfono:</label>
+		<input type="tel" id="telefono" name="telefono">
+		<br><br>
+
+		<label for="correo">Correo Electrónico:</label>
+		<input type="email" id="correo" name="correo">
+
+		<h3>Elige el Técnico</h3>
+		<input type="radio" name="tecnico">Informática
+		<input type="radio" name="tecnico">Contabilidad
+		<input type="radio" name="tecnico">Enfermería
+		<br><br>
+
+		<button>Enviar</button>
+	</form>
+</body>
+</html>
