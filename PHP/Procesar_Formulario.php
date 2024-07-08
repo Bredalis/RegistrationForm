@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nacimiento = $_POST['nacimiento'];
     $telefono = $_POST['telefono'];
     $correo = $_POST['correo'];
+    $clave = $_POST['clave'];
 
     // Establecer conexión con la base de datos SQLite
     $conexion = new SQLite3('../Datos_Del_Formulario.db');
@@ -19,8 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Insertar los datos en la tabla
     $insertQuery = "
-        INSERT INTO Formulario(Nombre, Nacimiento, Telefono, Correo) 
-        VALUES ('$nombre', '$nacimiento', '$telefono', '$correo')";
+        INSERT INTO Formulario(Nombre, Nacimiento, Telefono, Correo, Clave) 
+        VALUES ('$nombre', '$nacimiento', '$telefono', '$correo', '$clave')";
 
     $resultado = $conexion->exec($insertQuery);
 

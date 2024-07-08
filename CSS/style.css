@@ -1,26 +1,78 @@
 
-*{
+* {
 	text-align: center;
+	font-family: Georgia, sans-serif;
 }
 
-h1{
-	padding: 40px;
-	background-color: #7DCEA0;
+body {
+	background-color: #EBEFEE;
+	padding: 150px;
 }
 
-h2, h3{
-	padding: 20px;
+.titulos, form button {
+	background-color: #5DADE2;
+	color: whitesmoke;
 }
 
-form{
-	padding: 20px;
+.titulos, .formulario {
+	width: 50%;
 }
 
-button{
+.titulos {
+	margin-top: -150px;
+	margin-bottom: -600px;
+	padding-bottom: 443px;
+	position: relative;
+	top: 60px;
+	border-top-left-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+	box-shadow: 0 0 10px -5px rgba(41, 128, 185, 1);		
+}
+
+.titulos h1, .titulos h2 {
+	position: relative;
+	top: 250px;
+}
+
+.formulario {
+	background-color: #ffff;
+	padding-top: 100px;
+	position: relative;
+	left: 50%;
+	top: 40px;
+	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+	box-shadow: 0 0 10px -5px rgba(174, 214, 241, 1);		
+}
+
+.formulario form {
+	position: relative;
+	bottom: 50px;
+}
+
+form input {
+	border-radius: 1rem;
+	border: 1px solid #D7DBDD;
+}
+
+form input:focus {
+    box-shadow: 0 0 10px #5DADE2;
+    outline: none;
+}
+
+form input[type="date"] {
+	width: 28%;
+}
+
+form button {
+	width: 200px;	
 	font-size: 16px;
-	background-color: #7DCEA0;
 	border: none;
 	padding: 10px;
 	cursor: pointer;
-	border-radius: 10%;
+	border-radius: 1rem;
+}
+
+form button:hover {
+	box-shadow: 0 0 10px #5DADE2;
 }
