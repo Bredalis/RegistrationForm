@@ -1,17 +1,17 @@
 <?php
 
 // Verificar si se enviaron datos mediante POST
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     // Obtener los datos del formulario
-    $nombre = $_POST['nombre'];
-    $nacimiento = $_POST['nacimiento'];
-    $telefono = $_POST['telefono'];
-    $correo = $_POST['correo'];
-    $clave = $_POST['clave'];
+    $nombre = $_POST["nombre"];
+    $nacimiento = $_POST["nacimiento"];
+    $telefono = $_POST["telefono"];
+    $correo = $_POST["correo"];
+    $clave = $_POST["clave"];
 
     // Establecer conexión con la base de datos SQLite
-    $conexion = new SQLite3('../Datos_Del_Formulario.db');
+    $conexion = new SQLite3("../Datos_Del_Formulario.db");
 
     // Verificar la conexión
     if (!$conexion) {
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Insertar los datos en la tabla
     $insertQuery = "
         INSERT INTO Formulario(Nombre, Nacimiento, Telefono, Correo, Clave) 
-        VALUES ('$nombre', '$nacimiento', '$telefono', '$correo', '$clave')";
+        VALUES ("$nombre", "$nacimiento", "$telefono", "$correo", "$clave")";
 
     $resultado = $conexion->exec($insertQuery);
 
