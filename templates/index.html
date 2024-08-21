@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Formulario De Inscripción</title>
-	<link rel="shortcut icon" href="../Logo.png" type="image/x-icon">
-	<link rel="stylesheet" href="../CSS/style.css">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='IMG/Logo.png') }}" type="image/x-icon">
+	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
 </head>
 <body>
 
@@ -15,7 +15,7 @@
 	</div>
 
 	<div class="formulario">
-		<form action="http://localhost/Programas/Formulario_Inscripcion/PHP/Procesar_Formulario.php" method="POST">
+		<form action="{{ url_for('index') }}" method="POST">
 			<label for="nombre">Nombre Completo:</label>
 			<br><br>
 			<input type="text" id="nombre" name="nombre" placeholder="ej: Bredalis Guerrero">
@@ -42,15 +42,15 @@
 
 			<br><br>
 			<h3>Elige el Técnico</h3>
-			<input type="radio" name="tecnico">Informática
-			<input type="radio" name="tecnico">Contabilidad
-			<input type="radio" name="tecnico">Enfermería
+			<input type="radio" name="tecnico" value="Informática">Informática
+			<input type="radio" name="tecnico" value="Contabilidad">Contabilidad
+			<input type="radio" name="tecnico" value="Enfermería">Enfermería
 			<br><br>
 
-			<button>Enviar</button>
+			<button type="submit">Enviar</button>
 		</form>
 	</div>	
 
-	<script src="../JS/main.js"></script>
+	<script src="{{ url_for('static', filename='JS/main.js') }}"></script>
 </body>
 </html>
