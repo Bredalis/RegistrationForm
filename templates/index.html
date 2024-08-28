@@ -18,33 +18,33 @@
 		<form action="{{ url_for('index') }}" method="POST">
 			<label for="nombre">Nombre Completo:</label>
 			<br><br>
-			<input type="text" id="nombre" name="nombre" placeholder="ej: Bredalis Guerrero">
+			<input type="text" id="nombre" name="nombre" placeholder="ej: Bredalis Guerrero" required>
 
 			<br><br>
 			<label for="nacimiento">Fecha de Nacimiento:</label>	
 			<br><br>
-			<input type="date" id="nacimiento" name="nacimiento">
+			<input type="date" id="nacimiento" name="nacimiento" required>
 
 			<br><br>
 			<label for="telefono">Número de Teléfono:</label>
 			<br><br>
-			<input type="tel" id="telefono" name="telefono" placeholder="ej: 8097495200">
+			<input type="tel" id="telefono" name="telefono" placeholder="ej: 8097495200" required>
 
 			<br><br>
 			<label for="correo">Correo Electrónico:</label>
 			<br><br>
-			<input type="email" id="correo" name="correo" placeholder="ej: ejemplo@gmail.com">
+			<input type="email" id="correo" name="correo" placeholder="ej: ejemplo@gmail.com" required>
 
 			<br><br>
 			<label for="contraseña">Contraseña:</label>
 			<br><br>
-			<input type="password" id="contraseña" name="clave" placeholder="******">
+			<input type="password" id="contraseña" name="clave" placeholder="******" required>
 
 			<br><br>
 			<h3>Elige el Técnico</h3>
-			<input type="radio" name="tecnico" value="Informática">Informática
-			<input type="radio" name="tecnico" value="Contabilidad">Contabilidad
-			<input type="radio" name="tecnico" value="Enfermería">Enfermería
+			<input type="radio" name="tecnico" value="Informática" required>Informática
+			<input type="radio" name="tecnico" value="Contabilidad" required>Contabilidad
+			<input type="radio" name="tecnico" value="Enfermería" required>Enfermería
 			<br><br>
 
 			<button type="submit">Enviar</button>
