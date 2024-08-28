@@ -26,18 +26,16 @@ def formulario_inscripcion():
 		    clave = request.form.get("clave")
 		    tecnico = request.form.get("tecnico")
 
-		    if nombre and nacimiento and telefono and correo and clave and tecnico:
+		    coleccion.insert_one({
+		    	"Nombre": nombre,
+		    	"Nacimiento": nacimiento,
+		    	"Telefono": telefono,
+		    	"Email": correo,
+		    	"Contraseña": clave,
+		    	"Tecnico": tecnico
+		    })
 
-			    coleccion.insert_one({
-			    	"Nombre": nombre,
-			    	"Nacimiento": nacimiento,
-			    	"Telefono": telefono,
-			    	"Email": correo,
-			    	"Contraseña": clave,
-			    	"Tecnico": tecnico
-			    })
-
-			    print("Se enviaron los datos! \U0001F642")
+		    print("Se enviaron los datos! \U0001F642")
 
 		return render_template("index.html")
 
