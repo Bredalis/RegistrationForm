@@ -8,13 +8,12 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
 </head>
 <body>
-
-	<div class="titulos">
+	<header>
 		<h1>Inscripciones Para El <br>Politécnico Sergio Augusto Beras</h1>
 		<h2>Datos Del Estudiante:</h2>
-	</div>
+	</header>
 
-	<div class="formulario">
+	<main>
 		<form action="{{ url_for('index') }}" method="POST">
 			<label for="nombre">Nombre Completo:</label>
 			<br><br>
@@ -49,7 +48,7 @@
 
 			<button type="submit">Enviar</button>
 		</form>
-	</div>	
+	</main>	
 
 	<script src="{{ url_for('static', filename='JS/main.js') }}"></script>
 </body>
