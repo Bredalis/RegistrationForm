@@ -9,16 +9,16 @@ body {
 	padding: 150px;
 }
 
-.titulos, form button {
+header, form button {
 	background-color: #5DADE2;
 	color: whitesmoke;
 }
 
-.titulos, .formulario {
+header, main {
 	width: 50%;
 }
 
-.titulos {
+header {
 	margin-top: -150px;
 	margin-bottom: -600px;
 	padding-bottom: 443px;
@@ -26,15 +26,15 @@ body {
 	top: 60px;
 	border-top-left-radius: 1rem;
 	border-bottom-left-radius: 1rem;
-	box-shadow: 0 0 10px -5px rgba(41, 128, 185, 1);		
+	box-shadow: 0 0 10px -5px rgba(41, 128, 185, 1);
 }
 
-.titulos h1, .titulos h2 {
+header h1, header h2 {
 	position: relative;
 	top: 250px;
 }
 
-.formulario {
+main {
 	background-color: #ffff;
 	padding-top: 100px;
 	position: relative;
@@ -42,10 +42,10 @@ body {
 	top: 40px;
 	border-top-right-radius: 1rem;
 	border-bottom-right-radius: 1rem;
-	box-shadow: 0 0 10px -5px rgba(174, 214, 241, 1);		
+	box-shadow: 0 0 10px -5px rgba(174, 214, 241, 1);
 }
 
-.formulario form {
+main form {
 	position: relative;
 	bottom: 50px;
 }
@@ -65,7 +65,7 @@ form input[type="date"] {
 }
 
 form button {
-	width: 200px;	
+	width: 200px;
 	font-size: 16px;
 	border: none;
 	padding: 10px;

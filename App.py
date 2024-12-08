@@ -5,19 +5,17 @@ from dotenv import load_dotenv
 import os
 
 def formulario_inscripcion():
-
 	app = Flask(__name__)
 
 	# Conectar la bbdd
+	load_dotenv()
 	cliente = MongoClient(os.getenv("CLAVE_MONGO"))
 	app.db = cliente["FormularioInscripcion"]
 	coleccion = app.db["Solicitante"]
 
 	@app.route("/", methods = ["GET", "POST"])
 	def index():
-
 		if request.method == "POST":
-
 		    # Obtener los datos del formulario
 		    nombre = request.form.get("nombre")
 		    nacimiento = request.form.get("nacimiento")
@@ -35,8 +33,7 @@ def formulario_inscripcion():
 		    	"Tecnico": tecnico
 		    })
 
-		    print("Se enviaron los datos! \U0001F642")
-
+		    print("¡Se enviaron los datos! \U0001F642")
 		return render_template("index.html")
 
 	@app.errorhandler(404)
